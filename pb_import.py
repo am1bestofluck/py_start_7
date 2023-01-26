@@ -3,6 +3,9 @@ import shelve
 from pathlib import Path
 
 def import_(name_to_import: str =  None) -> None:
+    """лезем в шкаф, ищем то что в name_to_import; если name_to_import - пустое:
+    выгребаем всю базу
+    """
     # определяемся с именем файла 
     who = "full" if name_to_import is None or set(name_to_import)== set()\
          else name_to_import

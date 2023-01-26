@@ -3,6 +3,9 @@
 import shelve
 import string
 
+
+from consts import path_db
+
 def validate() -> tuple[str]:
     
     validSymbols = " -абвгдеёжзийклмнопрстуфчцчшщъыьэюя"
@@ -44,7 +47,7 @@ def validate() -> tuple[str]:
 
 def update_base():
     data = validate()
-    with shelve.open("dtb",writeback=True) as content:
+    with shelve.open(path_db,writeback=True) as content:
         ind = content['backend']['indx']
         content['backend']['indx'] = ind+1
         content['db'][ind] = {"id":ind, "name": data[0], "phone": data[1],

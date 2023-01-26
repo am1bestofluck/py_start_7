@@ -1,9 +1,10 @@
 # к заданию не относится, создаёт дефолтную базу
 import random,shelve
+from consts import path_db, random_names
 counter = 0
-with open("names.txt") as lst:
+with open(random_names) as lst:
     all_names = list(lst.read().split('\n'))
-with shelve.open("dtb",'n',writeback=True) as core:
+with shelve.open(path_db,'n',writeback=True) as core:
     core['backend']=dict()
     core['backend']['indx'] = 1000
     core ['db'] = dict()
