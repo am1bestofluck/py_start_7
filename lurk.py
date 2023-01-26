@@ -9,5 +9,7 @@ print(q.keys())
 print(q['backend'])
 print(len(q['db']))
 print(q['db'][999])
-print(q['db'][1000])
-print(q['db'][1001])
+try:
+    print(q['db'][1000])
+except KeyError:
+    print('default base?')
