@@ -3,7 +3,7 @@
 !.gitignore
 !*.py
 !*.MD
-!*.txt
-!db.bak
-!db.dat
-!db.dir
+!names.txt
+!dtb.bak
+!dtb.dat
+!dtb.dir
